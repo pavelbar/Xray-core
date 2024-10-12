@@ -122,7 +122,7 @@ jobs:
           # END riscv64 & ARM64 & LOONG64
           # BEGIN MIPS
           - goos: linux
-            goarch: mips32le
+            goarch: mips64
           - goos: linux
             goarch: mips64le
           - goos: linux
@@ -172,6 +172,7 @@ jobs:
       GOOS: ${{ matrix.goos }}
       GOARCH: ${{ matrix.goarch }}
       GOARM: ${{ matrix.goarm }}
+      GOMIPS: softfloat
       CGO_ENABLED: 0
     steps:
       - name: Checkout codebase
